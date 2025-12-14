@@ -94,7 +94,7 @@ Your code must demonstrate professional software engineering practices:
 - **PEP 257**: Include comprehensive docstrings for all modules, classes, and functions
 - **Type Hints (PEP 484)**: Use type annotations throughout the codebase
 - **Project Structure**: Organize code into logical modules
-- **Ruff Configuration**: A pre-configured `pyproject.toml` with ruff settings is provided in the repository. Your code must comply with these standards
+- **Ruff Configuration**: A pre-configured `pyproject.toml` with ruff settings is provided in the repository. Your code must comply with these standards. You can check compliance with `ruff check .` and format code with `ruff format .`
 
 ### 5. Documentation
 
@@ -140,6 +140,7 @@ Demonstrate professional Git workflow:
   - Fork the `intella-hiring-challenges` repository
   - Work within your forked repository
   - You have freedom to organize your Git workflow as you prefer
+  - When ready to submit, ensure your forked repository is accessible (public or add reviewers as collaborators)
   
 - **Commit Strategy** (optional but recommended):
   - Write clear commit messages following conventions:
