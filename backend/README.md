@@ -94,7 +94,10 @@ Your code must demonstrate professional software engineering practices:
 - **PEP 257**: Include comprehensive docstrings for all modules, classes, and functions
 - **Type Hints (PEP 484)**: Use type annotations throughout the codebase
 - **Project Structure**: Organize code into logical modules
-- **Ruff Configuration**: A pre-configured `pyproject.toml` with ruff settings is provided in the repository. Your code must comply with these standards. You can check compliance with `ruff check .` and format code with `ruff format .`
+- **Ruff Configuration**: A pre-configured `pyproject.toml` with ruff settings is provided in the repository
+  - Your code must comply with these standards
+  - Check compliance: `ruff check .`
+  - Format your code: `ruff format .`
 
 ### 5. Documentation
 
