@@ -10,8 +10,9 @@ This is a collection of assignments designed to evaluate candidates for differen
 
 ### Getting Started
 
-1. **Clone this repository**
-   - You can clone it as either a public or private repository
+1. **Fork this repository**
+   - Click the "Fork" button at the top right of this repository
+   - You can fork it as either a public or private repository
    - If private, make sure to add Intella reviewers as contributors
 
 2. **Navigate to your role-specific folder**
@@ -21,7 +22,6 @@ This is a collection of assignments designed to evaluate candidates for differen
 3. **Complete the assignment**
    - Follow the instructions in the role-specific README
    - Implement the required features and functionality
-   - **Commit often** to show your progress and development process
 
 4. **Code quality matters**
    - Write clean, maintainable code

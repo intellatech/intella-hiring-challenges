@@ -93,12 +93,11 @@ Your code must demonstrate professional software engineering practices:
 - **PEP 8**: Follow Python style guide (use `black` or `ruff` for formatting)
 - **PEP 257**: Include comprehensive docstrings for all modules, classes, and functions
 - **Type Hints (PEP 484)**: Use type annotations throughout the codebase
-- **Project Structure**: Organize code into logical modules:
-- **Custom Decorator**: Implement at least one custom decorator, such as:
-  - Request logging decorator
-  - Execution timing decorator
-  - Input validation decorator
-  - Rate limiting decorator
+- **Project Structure**: Organize code into logical modules
+- **Ruff Configuration**: A pre-configured `pyproject.toml` with ruff settings is provided in the repository
+  - Your code must comply with these standards
+  - Check compliance: `ruff check .`
+  - Format your code: `ruff format .`
 
 ### 5. Documentation
 
@@ -111,36 +110,49 @@ Provide comprehensive documentation for users and developers:
   - How to run the application
   - API usage examples with curl or Python requests
   - Project structure explanation
-  - Design decisions and trade-offs
   
 - **API Documentation**:
   - FastAPI auto-generates Swagger UI at `/docs`
   - Ensure all endpoints have clear descriptions
   - Add request/response examples in docstrings
   - Document query parameters and their effects
-  
-- **Code Comments**:
-  - Add inline comments for complex logic
-  - Explain architectural decisions in module docstrings
 
-### 6. Version Control Best Practices
+- **Architecture Documentation** (optional):
+  - If you have significant architectural decisions or trade-offs to explain, you may document them in a separate file (e.g., `ARCHITECTURE.md`)
+  - This is not required but can be useful for complex design choices
+
+### 6. Testing
+
+Implement comprehensive test coverage for your application:
+
+- **Unit tests** for services and generators
+- **Integration tests** for API endpoints
+- Use `pytest` with fixtures
+- Aim for reasonable code coverage (>70% is recommended)
+- Tests should cover:
+  - Core API functionality
+  - Data validation
+  - Error handling scenarios
+  - Edge cases
+
+### 7. Version Control Best Practices
 
 Demonstrate professional Git workflow:
 
 - **Repository Setup**: 
-  - Create a private GitHub repository named `intella-satellite-telemetry-api` or similar
-  - Initialize with a `.gitignore` for Python
-  - Add a clear README from the start
+  - Fork the `intella-hiring-challenges` repository
+  - Work within your forked repository
+  - You have freedom to organize your Git workflow as you prefer
+  - When ready to submit, ensure your forked repository is accessible (public or add reviewers as collaborators)
   
-- **Commit Strategy**:
-  - Make **frequent, atomic commits** that show your development process
+- **Commit Strategy** (optional but recommended):
   - Write clear commit messages following conventions:
     - `feat: add satellite CRUD endpoints`
     - `refactor: extract telemetry generator to service layer`
     - `docs: update README with API examples`
     - `fix: correct timestamp validation in telemetry model`
   
-- **Branch Strategy** (optional but recommended):
+- **Branch Strategy** (optional):
   - Work on feature branches if comfortable
   - Use meaningful branch names: `feature/telemetry-endpoints`, `refactor/data-models`
   
@@ -179,12 +191,6 @@ Pick any of these to showcase additional skills:
   - Better dependency management
   - Reproducible builds
   
-- [ ] **Testing**: Add comprehensive test coverage
-  - Unit tests for services and generators
-  - Integration tests for API endpoints
-  - Use `pytest` with fixtures
-  - Aim for >70% code coverage
-  
 - [ ] **Logging**: Implement structured logging
   - Use `structlog` or Python's `logging` module
   - Log levels: DEBUG, INFO, WARNING, ERROR
@@ -197,6 +203,10 @@ Pick any of these to showcase additional skills:
 - [ ] **API Versioning**: Implement `/v1/` prefix for API routes
   - Prepare for future API evolution
 
+## 🌟 Nice to Have
+
+- **Commit History**: Making frequent, atomic commits that show your development process can be helpful for reviewers, but you have complete freedom to organize your Git workflow as you prefer
+
 ## 📋 Evaluation Criteria
 
 Your submission will be evaluated across multiple dimensions:
@@ -206,12 +216,12 @@ Your submission will be evaluated across multiple dimensions:
 | **Architecture** | Clear separation of concerns, sensible module structure, scalability considerations | ⭐⭐⭐⭐⭐ |
 | **Code Quality** | Readability, consistency, proper use of Python idioms, type safety | ⭐⭐⭐⭐⭐ |
 | **API Design** | RESTful conventions, proper HTTP status codes, meaningful responses, error handling | ⭐⭐⭐⭐⭐ |
+| **Error Handling** | Graceful handling of edge cases, validation errors, proper status codes | ⭐⭐⭐⭐⭐ |
+| **Testing** | Comprehensive unit/integration tests, edge case coverage | ⭐⭐⭐⭐ |
 | **Domain Understanding** | Appropriate modeling of satellite/unit/parameter hierarchy, realistic telemetry | ⭐⭐⭐⭐ |
 | **Tooling** | Effective use of modern Python ecosystem (FastAPI, Pydantic, etc.) | ⭐⭐⭐⭐ |
-| **Git Workflow** | Commit history that tells a story of iterative development | ⭐⭐⭐⭐ |
 | **Documentation** | Clear README, code comments, API documentation | ⭐⭐⭐⭐ |
-| **Error Handling** | Graceful handling of edge cases, validation errors, proper status codes | ⭐⭐⭐ |
-| **Testing** | Unit/integration tests (bonus), manual testing evidence | ⭐⭐⭐ |
+| **Git Workflow** | Commit history that tells a story of iterative development (nice to have) | ⭐⭐⭐ |
 
 ### Key Evaluation Questions
 
@@ -228,18 +238,17 @@ We'll be asking ourselves:
 
 ## ⏱️ Time Expectation
 
-**Estimated time**: 4-6 hours
+**Estimated time**: Maximum 8 hours
 
 **Our advice**: Focus on **quality over quantity**. A smaller, well-crafted solution is significantly better than a large, messy one.
 
 ### Suggested Breakdown
 
-- **Hour 1**: Project setup, domain modeling, basic structure
-- **Hour 2**: Data generator and in-memory storage
-- **Hour 3**: Core API endpoints (GET operations)
-- **Hour 4**: CRUD operations (POST, PUT, DELETE)
-- **Hour 5**: Documentation, testing, refinement
-- **Hour 6**: Bonus features (if time permits)
+- **Hours 1-2**: Project setup, domain modeling, basic structure
+- **Hours 3-4**: Data generator and storage implementation
+- **Hours 5-6**: Core API endpoints with full CRUD operations
+- **Hour 7**: Testing implementation (unit and integration tests)
+- **Hour 8**: Documentation, refinement, and final polish
 
 ## 📦 Expected Deliverables
 
@@ -254,8 +263,7 @@ Your final submission should include:
 - Well-organized project structure
 - Type-annotated Python code
 - Pydantic models for all entities
-- At least one custom decorator
-- Clean, commented code
+- Clean, well-structured code
 
 ### 3. Documentation
 - **README.md** with:
@@ -263,15 +271,12 @@ Your final submission should include:
   - Setup instructions
   - How to run the application
   - API usage examples
-  - Architecture overview
-  - Design decisions
+  - Architecture overview (or in separate ARCHITECTURE.md if preferred)
 - API documentation via Swagger UI
-- Inline code comments where needed
 
 ### 4. Git History
-- Multiple atomic commits
-- Clear commit messages
-- Logical progression of features
+- Clear commit messages (recommended but not required)
+- Your preferred Git workflow
 
 ### 5. Configuration Files
 - `requirements.txt` or `pyproject.toml`
