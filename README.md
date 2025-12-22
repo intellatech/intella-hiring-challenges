@@ -58,4 +58,3 @@ If you have any questions about the assignment, please reach out to your Intella
 ---
 
 Good luck! We look forward to reviewing your work and learning more about your engineering approach.
-

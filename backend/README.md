@@ -2,20 +2,20 @@
 
 **Project:** Satellite Telemetry API
 
-## 🎯 Context
+## Context
 
 At Intella, we build AI-powered software for satellite operations. A fundamental capability is ingesting, storing, and exposing satellite telemetry data through well-designed APIs.
 
-Your task is to build a **minimal but well-architected FastAPI application** that simulates a satellite telemetry system with full CRUD capabilities. This assessment evaluates your ability to:
+Your task is to build a **minimal but well-architected FastAPI application** that simulates a satellite telemetry system with CRUD capabilities. This assessment evaluates your ability to:
 
 - Design RESTful APIs following industry best practices
 - Model complex domain relationships
 - Write clean, maintainable Python code
 - Make architectural decisions that balance simplicity with extensibility
 
-## 📊 Domain Model
+## Domain Model
 
-The system manages a hierarchical structure of satellite components and their telemetry data:
+The system manages a hierarchical structure of satellite components and their telemetry data
 
 ```
 Satellite (e.g., "Intella-Sat-1")
@@ -25,6 +25,7 @@ Satellite (e.g., "Intella-Sat-1")
 ```
 
 **Example Structure:**
+
 ```
 Satellite: Intella-Sat-1
 ├── Unit: Power System
@@ -36,7 +37,7 @@ Satellite: Intella-Sat-1
     └── Parameter: radiator_temp (telemetry: -10°C, -9°C, -11°C...)
 ```
 
-## ✅ Mandatory Requirements
+## Requirements
 
 ### 1. Data Generation
 
@@ -69,9 +70,9 @@ Design and implement a clear domain model using Pydantic:
   - `TelemetryData` (id, parameter_id, timestamp, value)
 - **Validation**: Use Pydantic validators for data integrity (e.g., value ranges, timestamp formats)
 
-### 3. REST API (FastAPI) - Full CRUD Operations
+### 3. REST API (FastAPI) - CRUD Operations
 
-Implement a comprehensive REST API with full CRUD capabilities:
+Implement a FastAPI REST API layer with CRUD capabilities:
 
 - List all satellites with pagination support
 - Get detailed satellite information
@@ -108,8 +109,7 @@ Provide comprehensive documentation for users and developers:
   - Prerequisites (Python version, dependencies)
   - Installation instructions (step-by-step)
   - How to run the application
-  - API usage examples with curl or Python requests
-  - Project structure explanation
+  - Other documentation regarding design choices
   
 - **API Documentation**:
   - FastAPI auto-generates Swagger UI at `/docs`
@@ -123,12 +123,12 @@ Provide comprehensive documentation for users and developers:
 
 ### 6. Testing
 
-Implement comprehensive test coverage for your application:
+Implement test coverage for your application:
 
 - **Unit tests** for services and generators
 - **Integration tests** for API endpoints
 - Use `pytest` with fixtures
-- Aim for reasonable code coverage (>70% is recommended)
+- Aim for reasonable code coverage
 - Tests should cover:
   - Core API functionality
   - Data validation
@@ -139,10 +139,11 @@ Implement comprehensive test coverage for your application:
 
 Demonstrate professional Git workflow:
 
-- **Repository Setup**: 
+- **Repository Setup**:
   - Fork the `intella-hiring-challenges` repository
+  - Add the Intella evaluators as contributors to the repository
   - Work within your forked repository
-  - You have freedom to organize your Git workflow as you prefer
+  - You have freedom to organize your Git workflow as you prefer (remember to commit frequently)
   - When ready to submit, ensure your forked repository is accessible (public or add reviewers as collaborators)
   
 - **Commit Strategy** (optional but recommended):
@@ -160,7 +161,7 @@ Demonstrate professional Git workflow:
   - Invite reviewers: [emails will be provided]
   - Ensure all code is pushed and documented
 
-## 🌟 Bonus Requirements (Optional)
+## Bonus Requirements (Optional)
 
 Pick any of these to showcase additional skills:
 
@@ -203,11 +204,11 @@ Pick any of these to showcase additional skills:
 - [ ] **API Versioning**: Implement `/v1/` prefix for API routes
   - Prepare for future API evolution
 
-## 🌟 Nice to Have
+## Nice to Have
 
 - **Commit History**: Making frequent, atomic commits that show your development process can be helpful for reviewers, but you have complete freedom to organize your Git workflow as you prefer
 
-## 📋 Evaluation Criteria
+## Evaluation Criteria
 
 Your submission will be evaluated across multiple dimensions:
 
@@ -217,10 +218,10 @@ Your submission will be evaluated across multiple dimensions:
 | **Code Quality** | Readability, consistency, proper use of Python idioms, type safety | ⭐⭐⭐⭐⭐ |
 | **API Design** | RESTful conventions, proper HTTP status codes, meaningful responses, error handling | ⭐⭐⭐⭐⭐ |
 | **Error Handling** | Graceful handling of edge cases, validation errors, proper status codes | ⭐⭐⭐⭐⭐ |
-| **Testing** | Comprehensive unit/integration tests, edge case coverage | ⭐⭐⭐⭐ |
-| **Domain Understanding** | Appropriate modeling of satellite/unit/parameter hierarchy, realistic telemetry | ⭐⭐⭐⭐ |
-| **Tooling** | Effective use of modern Python ecosystem (FastAPI, Pydantic, etc.) | ⭐⭐⭐⭐ |
 | **Documentation** | Clear README, code comments, API documentation | ⭐⭐⭐⭐ |
+| **Testing** | Comprehensive unit/integration tests, edge case coverage | ⭐⭐⭐⭐ |
+| **Domain Understanding** | Appropriate modeling of satellite/unit/parameter hierarchy, realistic telemetry | ⭐⭐⭐ |
+| **Tooling** | Effective use of modern Python ecosystem (FastAPI, Pydantic, etc.) | ⭐⭐⭐ |
 | **Git Workflow** | Commit history that tells a story of iterative development (nice to have) | ⭐⭐⭐ |
 
 ### Key Evaluation Questions
@@ -236,7 +237,7 @@ We'll be asking ourselves:
 7. **Do they think about edge cases?** Error handling, validation, boundaries
 8. **Is their Git history informative?** Commits show thoughtful progression
 
-## ⏱️ Time Expectation
+## Time Expectation
 
 **Estimated time**: Maximum 8 hours
 
@@ -250,22 +251,25 @@ We'll be asking ourselves:
 - **Hour 7**: Testing implementation (unit and integration tests)
 - **Hour 8**: Documentation, refinement, and final polish
 
-## 📦 Expected Deliverables
+## Expected Deliverables
 
 Your final submission should include:
 
 ### 1. Working Application
+
 - FastAPI server that starts without errors
 - All mandatory endpoints functional
 - Swagger UI accessible at `/docs`
 
 ### 2. Source Code
+
 - Well-organized project structure
 - Type-annotated Python code
 - Pydantic models for all entities
 - Clean, well-structured code
 
 ### 3. Documentation
+
 - **README.md** with:
   - Project description
   - Setup instructions
@@ -275,42 +279,38 @@ Your final submission should include:
 - API documentation via Swagger UI
 
 ### 4. Git History
+
 - Clear commit messages (recommended but not required)
 - Your preferred Git workflow
 
-### 5. Configuration Files
-- `requirements.txt` or `pyproject.toml`
-- `.gitignore` for Python
-- Optional: `Dockerfile`, `docker-compose.yml`, `Makefile`
+## Submission Process
 
-## 🚀 Submission Process
-
-1. **Finalize your code**
-   - Ensure all features work as expected
-   - Run a final test of all endpoints
-   - Clean up any debug code or TODOs
-   
-2. **Update documentation**
-   - Verify README is complete and accurate
-   - Test setup instructions on a clean environment
-   - Add any final notes or considerations
-   
-3. **Push to repository**
-   - Commit any final changes
-   - Push all branches to your remote repository
-   - Verify everything is visible on GitHub
-   
-4. **Add reviewers as collaborators**
+1. **Add reviewers as collaborators**
    - Go to Settings → Collaborators
    - Add the provided reviewer accounts
    - Ensure they have Read access minimum
-   
+
+2. **Finalize your code**
+   - Ensure all features work as expected
+   - Run a final test of all endpoints
+   - Clean up any debug code or TODOs
+
+3. **Update documentation**
+   - Verify README is complete and accurate
+   - Test setup instructions on a clean environment
+   - Add any final notes or considerations
+
+4. **Push to repository**
+   - Commit any final changes
+   - Push all branches to your remote repository
+   - Verify everything is visible on GitHub
+
 5. **Notify us**
    - Reply to the email with your repository link
    - Confirm submission is ready for review
    - Include any special notes or highlights
 
-## 💡 Tips for Success
+## Tips for Success
 
 - **Start simple**: Get a basic version working first, then enhance
 - **Test as you go**: Use `/docs` to manually test each endpoint
@@ -321,7 +321,7 @@ Your final submission should include:
 - **Time-box yourself**: Don't spend hours on a single feature
 - **Focus on fundamentals**: Architecture and code quality matter most
 
-## ❓ FAQ
+## FAQ
 
 **Q: Can I use a database instead of in-memory storage?**  
 A: Yes, that's a bonus requirement. But in-memory is perfectly fine for the core assessment.
@@ -349,11 +349,13 @@ A: Absolutely! Use all resources available to you.
 
 ---
 
-## 🎯 Final Note
+## Final Note
 
 This assessment is designed to be challenging but achievable. We're not looking for perfection—we want to see how you approach problems, structure solutions, and write code that others can work with.
 
 **Remember**: At Intella, we value engineers who can:
+
+- Create something that has a value, it's simple and it's working
 - Build reliable systems
 - Write maintainable code
 - Make pragmatic decisions
