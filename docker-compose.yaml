@@ -1,0 +1,20 @@
+networks:
+  application:
+    driver: bridge
+
+services:
+
+  ################################
+  #           Backend            #
+  ################################
+  backend:
+    restart: always
+    ports:
+      - 8080:8080
+    build:
+      context: ./backend
+      dockerfile: ./Dockerfile
+    volumes:
+      - ./backend:/app
+    networks:
+      - application
